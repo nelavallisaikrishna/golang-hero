@@ -6,6 +6,19 @@ import "fmt"
 
 type deck []string //custom type create
 
+func newDeck() deck {
+	cards := deck{}
+	cardSuits := []string{"Spades", "Diamonds", "Hearts", "Cluds"}
+	cardValues := []string{"Ace", "two", "Three", "Four"}
+
+	for _, suit := range cardSuits {
+		for _, value := range cardValues {
+			cards = append(cards, value+" of "+suit)
+		}
+	}
+	return cards
+}
+
 // Receiver creating
 func (d deck) print() {
 	for i, card := range d {

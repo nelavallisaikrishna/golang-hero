@@ -7,13 +7,9 @@ func main() {
 	// card := "Ace of Spades"   /* variable initialization*/
 	// card = "Five of Diamonds" /* variable assign value*/
 	// card := newCard()
-	cards := deck{"Ace of Diamonds", newCard()}
-	cards = append(cards,"Six of Diamonds")
+	cards := newDeck()
 	fmt.Println("cards --------------", cards)
 	cards.print()
 
 }
 
-func newCard() string {
-	return "Five of Diamonds"
-}
