@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func main() {
 	// var card string = "Ace of Spades"
 	// card := "Ace of Spades"   /* variable initialization*/
@@ -16,8 +14,8 @@ func main() {
 	// call := "Hi! How are you?"
 	// //converting to bytes
 	// fmt.Println([]byte(call))
-	cards := newDeck()
-	saveData := cards.saveToFile("my_deck")
-	fmt.Println(saveData)
+	// cards := newDeck()
+	cards := newDeckFromFile("my_deck")
+	cards.print()
 
 }
