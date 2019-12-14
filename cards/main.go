@@ -17,6 +17,7 @@ func main() {
 	// //converting to bytes
 	// fmt.Println([]byte(call))
 	cards := newDeck()
-	fmt.Println(cards.toString())
+	saveData := cards.saveToFile("my_deck")
+	fmt.Println(saveData)
 
 }
