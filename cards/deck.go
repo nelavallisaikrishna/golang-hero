@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 // Create a new type deck with array of strings
 
@@ -26,6 +29,10 @@ func (d deck) print() {
 	}
 }
 
-func deal(d deck, inhand int)(deck, deck){
+func deal(d deck, inhand int) (deck, deck) {
 	return d[:inhand], d[inhand:]
+}
+/*Converting []string to string*/
+func (d deck) toString() string {
+	return strings.Join([]string(d), ",")
 }
