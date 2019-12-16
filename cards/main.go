@@ -14,8 +14,12 @@ func main() {
 	// call := "Hi! How are you?"
 	// //converting to bytes
 	// fmt.Println([]byte(call))
-	// cards := newDeck()
-	cards := newDeckFromFile("my_deck")
+
+	// cards := newDeckFromFile("my_deck")
+	// cards.print()
+
+	cards := newDeck()
+	cards.shuffle()
 	cards.print()
 
 }
