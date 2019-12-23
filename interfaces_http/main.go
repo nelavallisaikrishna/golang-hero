@@ -12,6 +12,8 @@ func main() {
 		fmt.Println("Eroor:", err)
 		os.Exit(1)
 	}
-
-	fmt.Println(resp)
+	// It will create byte with n(99999) number of elements
+	bs := make([]byte, 99999)
+	resp.Body.Read(bs)
+	fmt.Println(string(bs))
 }
